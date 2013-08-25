@@ -1,0 +1,18 @@
+{
+  "content_scripts": [
+    "content.js"
+  ], 
+  "description": "Encrypt your Facebook chat with off-the-record messaging.", 
+  "creator": "Liam Anderson", 
+  "background_scripts": [
+    "main.js"
+  ], 
+  "homepage_url": "https://liamja.github.io/otr-for-facebook", 
+  "version": "0.0.0", 
+  "browser_button": {
+    "caption": "OTR for Facebook", 
+    "icon": "icons/button.png", 
+    "tooltipText": "OTR for Facebook"
+  }, 
+  "name": "OTR for Facebook"
+}
