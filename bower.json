@@ -1,0 +1,32 @@
+{
+  "name": "OTR for Facebook",
+  "version": "0.0.0",
+  "authors": [
+    "Liam Anderson <Liam.Anderson.91@gmail.com>"
+  ],
+  "description": "Encrypt your Facebook chat with off-the-record messaging.",
+  "main": "src/common/main.js",
+  "keywords": [
+    "facebook",
+    "otr",
+    "encryption",
+    "secure",
+    "messaging"
+  ],
+  "license": "MIT",
+  "homepage": "http://liamja.github.io/otr-for-facebook",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "output",
+    "certificates"
+  ],
+  "dependencies": {
+    "otr": "0.2.5",
+    "jquery": "1.10.2"
+  },
+}

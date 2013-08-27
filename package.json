@@ -1,0 +1,35 @@
+{
+  "name": "otr-for-facebook",
+  "version": "0.0.0",
+  "description": "Encrypt your Facebook chat with off-the-record messaging.",
+  "main": "src/common/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "liamja/otr-for-facebook"
+  },
+  "keywords": [
+    "otr",
+    "facebook",
+    "fb",
+    "off",
+    "the",
+    "record",
+    "perfect",
+    "forward",
+    "secrecy",
+    "encryption",
+    "secure",
+    "messaging"
+  ],
+  "author": "Liam Anderson",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "~0.6.3",
+    "grunt-contrib-nodeunit": "~0.2.0",
+    "grunt-contrib-uglify": "~0.2.2"
+  }
+}
