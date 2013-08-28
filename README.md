@@ -30,6 +30,24 @@ This browser extension is built upon the following code:
   * [Zepto.js](http://zeptojs.com/)
 
 
+Development
+-----------
+
+You'll need to download and install the Kango framwork to build the extensions:
+
+* [Download and Install Python 2.7](http://www.python.org/download/)
+* [Download Kango](http://kangoextensions.com/kango/kango-framework-latest.zip).
+* Extract the archive to any directory.
+* Download and install dependencies:
+
+    npm install
+    bower install
+
+Build the extensions by running:
+
+    /kango-path/kango.py build /otr-for-facebook/
+
+
 License
 -------
 
