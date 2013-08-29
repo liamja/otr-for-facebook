@@ -47,6 +47,10 @@ Build the extensions by running:
 
     /kango-path/kango.py build /otr-for-facebook/
 
+or
+
+    grunt build
+
 
 License
 -------
