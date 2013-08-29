@@ -2,7 +2,7 @@
 // @name OTR for Facebook
 // @include http://*.facebook.com
 // @include https://*.facebook.com
-// @require lib/zepto.js
+// @require lib/jquery.js
 // @require lib/dep/bigint.js
 // @require lib/dep/crypto.js
 // @require lib/dep/eventemitter.js
@@ -14,7 +14,7 @@ var DSA = require('otr').DSA;
 var OTR = require('otr').OTR;
 
 // execute callback when the page is ready:
-Zepto(function($){
+$(document).ready(function() {
   console.log("OTR for Facebook loaded.");
   console.log($('.headerTinymanName').text());
 
