@@ -10,7 +10,19 @@
 // @require lib/otr.js
 // ==/UserScript==
 
-console.log("OTR for Facebook loaded.");
-
 var DSA = require('otr').DSA;
 var OTR = require('otr').OTR;
+
+// execute callback when the page is ready:
+Zepto(function($){
+  console.log("OTR for Facebook loaded.");
+  console.log($('.headerTinymanName').text());
+
+  var elemChatTabs = $('#ChatTabsPagelet .fbDockChatTabFlyout');
+  console.log(elemChatTabs.size());
+  $(elemChatTabs).on('focus', 'textarea', function(e){
+    console.log('textarea has focus.');
+  });
+})
+
+
