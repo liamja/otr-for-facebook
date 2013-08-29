@@ -10,12 +10,11 @@
 // @require lib/otr.js
 // ==/UserScript==
 
-var DSA = require('otr').DSA;
-var OTR = require('otr').OTR;
+console.log("OTR for Facebook loaded.");
 
 // execute callback when the page is ready:
-$(document).ready(function() {
-  console.log("OTR for Facebook loaded.");
+$('#ChatTabsPagelet').ready(function() {
+  console.log("doc ready.");
   console.log($('.headerTinymanName').text());
 
   var elemChatTabs = $('#ChatTabsPagelet .fbDockChatTabFlyout');
@@ -23,6 +22,4 @@ $(document).ready(function() {
   $(elemChatTabs).on('focus', 'textarea', function(e){
     console.log('textarea has focus.');
   });
-})
-
-
+});
