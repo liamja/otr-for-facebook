@@ -43,7 +43,7 @@ module.exports = function(grunt) {
       }
     },
     copy: {
-      main: {
+      libs: {
         files: [
           {
             expand: true,
@@ -88,6 +88,6 @@ module.exports = function(grunt) {
 
   // Default task.
   grunt.registerTask('default', ['jshint', 'qunit']);
-  grunt.registerTask('build', ['copy', 'shell', 'clean:build']);
+  grunt.registerTask('build', ['copy:libs', 'shell', 'clean:build']);
 
 };
