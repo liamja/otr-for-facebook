@@ -41,15 +41,53 @@ module.exports = function(grunt) {
         files: '<%= jshint.lib_test.src %>',
         tasks: ['jshint:lib_test', 'qunit']
       }
-    }
+    },
+    copy: {
+      libs: {
+        files: [
+          {
+            expand: true,
+            flatten: true,
+            src: [
+              'bower_components/otr/build/dep/**',
+            ],
+            dest: 'src/common/lib/dep/',
+            filter: 'isFile'
+          },
+          {
+            expand: true,
+            flatten: true,
+            src: [
+              'bower_components/zepto/zepto.js', 
+              'bower_components/otr/build/otr.js'
+            ],
+            dest: 'src/common/lib/',
+            filter: 'isFile'
+          }
+        ]
+      }
+    },
+    shell: {
+      build: {
+        command: 'G:\\Dev\\JS\\kango-framework-latest\\kango.py build "G:\\Dev\\OTR for Facebook"'
+      }
+    },
+    clean: {
+      build: ["src/common/lib/"],
+      release: ["output/"]
+    },
   });
 
   // These plugins provide necessary tasks.
   grunt.loadNpmTasks('grunt-contrib-qunit');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-shell');
 
   // Default task.
   grunt.registerTask('default', ['jshint', 'qunit']);
+  grunt.registerTask('build', ['copy:libs', 'shell', 'clean:build']);
 
 };
