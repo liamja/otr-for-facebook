@@ -63,7 +63,11 @@ module.exports = function(grunt) {
       build: {
         command: 'G:\\Dev\\JS\\kango-framework-latest\\kango.py build "G:\\Dev\\OTR for Facebook"'
       }
-    }
+    },
+    clean: {
+      build: ["src/common/lib/"],
+      release: ["output/"]
+    },
   });
 
   // These plugins provide necessary tasks.
@@ -76,6 +80,6 @@ module.exports = function(grunt) {
 
   // Default task.
   grunt.registerTask('default', ['jshint', 'qunit']);
-  grunt.registerTask('build', ['copy', 'shell']);
+  grunt.registerTask('build', ['copy', 'shell', 'clean:build']);
 
 };
