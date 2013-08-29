@@ -49,9 +49,17 @@ module.exports = function(grunt) {
             expand: true,
             flatten: true,
             src: [
-              'bower_components/zepto/zepto.js', 
               'bower_components/otr/build/dep/**',
-              'bower_components/otr/lib/otr.js'
+            ],
+            dest: 'src/common/lib/dep/',
+            filter: 'isFile'
+          },
+          {
+            expand: true,
+            flatten: true,
+            src: [
+              'bower_components/zepto/zepto.js', 
+              'bower_components/otr/build/otr.js'
             ],
             dest: 'src/common/lib/',
             filter: 'isFile'
