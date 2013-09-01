@@ -49,7 +49,7 @@ module.exports = function(grunt) {
             expand: true,
             flatten: true,
             src: [
-              'bower_components/otr/build/dep/**',
+              'components/otr/build/dep/**',
             ],
             dest: 'src/common/lib/dep/',
             filter: 'isFile'
@@ -58,8 +58,8 @@ module.exports = function(grunt) {
             expand: true,
             flatten: true,
             src: [
-              'bower_components/zepto/zepto.js', 
-              'bower_components/otr/build/otr.js'
+              'components/jquery/jquery.js', 
+              'components/otr/build/otr.js'
             ],
             dest: 'src/common/lib/',
             filter: 'isFile'

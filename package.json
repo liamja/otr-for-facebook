@@ -1,5 +1,6 @@
 {
   "name": "otr-for-facebook",
+  "id": "jid1-Xg8yPz3mAg3mQA",
   "version": "0.0.0",
   "description": "Encrypt your Facebook chat with off-the-record messaging.",
   "main": "src/common/main.js",

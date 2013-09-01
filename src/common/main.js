@@ -1,20 +1,16 @@
-﻿function MyExtension() {
-	var self = this;
-	kango.ui.browserButton.addEventListener(kango.ui.browserButton.event.COMMAND, function() {
-		kango.console.log('Button clicked!');
-		self._onCommand();
-	});
-}
+﻿kango.console.log('main.js loaded');
 
-MyExtension.prototype = {
+// precompute your DSA key
+var myKey = new DSA();
+kango.storage.setItem("myKey", myKey);
 
-	_onCommand: function() {
-		// precompute your DSA key
-		var myKey = new DSA();
-		kango.storage.setItem("myKey", myKey);
-		var storedKey = kango.storage.getItem('myKey');
-		kango.console.log('stored key is:\n' + storedKey);
-	}
-};
+// Handle button click
+kango.ui.browserButton.addEventListener(kango.ui.browserButton.event.COMMAND, function(event) {
+  kango.console.log('Button clicked');
+  kango.ui.browserButton.setPopup({
+    url: 'options.html',
+    width: 640,
+    height: 480
+  });
+});
 
-var extension = new MyExtension();
