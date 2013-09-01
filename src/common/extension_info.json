@@ -5,10 +5,10 @@
   "description": "Encrypt your Facebook chat with off-the-record messaging.", 
   "creator": "Liam Anderson", 
   "background_scripts": [
+    "lib/dep/salsa20.js",
     "lib/dep/bigint.js",
     "lib/dep/crypto.js",
     "lib/dep/eventemitter.js",
-    "lib/dep/salsa20.js",
     "lib/otr.js",
     "main.js"
   ], 
@@ -19,5 +19,6 @@
     "icon": "icons/button.png", 
     "tooltipText": "OTR for Facebook"
   }, 
+  "options_page": "options.html",
   "name": "OTR for Facebook"
 }

@@ -11,6 +11,7 @@
 // ==/UserScript==
 
 console.log("OTR for Facebook loaded.");
+console.log(kango);
 
 // execute callback when the page is ready:
 $('#ChatTabsPagelet').ready(function() {
@@ -22,4 +23,10 @@ $('#ChatTabsPagelet').ready(function() {
   $(elemChatTabs).on('focus', 'textarea', function(e){
     console.log('textarea has focus.');
   });
+
+});
+
+// Get last saved color number from storage
+kango.invokeAsync('kango.storage.getItem', 'myKey', function(key) {
+    console.log('stored value for myKey is ' + myKey);
 });
