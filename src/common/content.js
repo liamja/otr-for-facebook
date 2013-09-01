@@ -28,7 +28,7 @@ $(document).ready(function() {
     console.log(this);
     $(this)
       .find(".titlebarButtonWrapper")
-      .prepend('<a tabindex="0" data-hover="tooltip" aria-label="Encrypt" class="encrypticon button" role="button"></a>');
+      .prepend('<a tabindex="0" data-hover="tooltip" aria-label="Encrypt" class="encrypticon button sx_ad3761 sp_docamc" role="button"></a>');
   });
   
 });
