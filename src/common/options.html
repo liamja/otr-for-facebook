@@ -11,11 +11,12 @@
     <!-- <link rel="stylesheet" href="css/normalize.css"> -->
     <link rel="stylesheet" href="css/main.css">
     <script type="text/javascript" src="kango-ui/kango_api.js"></script>
+    <script type="text/javascript" src="lib/jquery.js"></script>
     <script type="text/javascript" src="options.js"></script>
   </head>
   <body>    
     <h1>OTR for Facebook</h1>
     <h2>Settings</h2>
-    <p>Hello world! This is HTML5 Boilerplate.</p>
+    <button onclick="kango.invokeAsync('FBOTR.generateDSAKey');">Generate new DSA private key</button>
   </body>
 </html>

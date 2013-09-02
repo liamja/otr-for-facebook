@@ -1,5 +1,5 @@
-KangoAPI.onReady(function() {
-  kango.invokeAsync('kango.storage.getItem', 'myKey', function(myKey) {
-    alert(myKey);
+KangoAPI.onReady(function () {
+  kango.invokeAsync("FBOTR.getDSAKey", function (key) {
+    console.log(key);
   });
 });
