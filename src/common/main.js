@@ -6,20 +6,20 @@ function FBOTR() {
   // Can't access properties using kango.invokeAsync
   // Use getters and setters instead.
   this.getDSAKey = function () {
-    return this.DSAKey || kango.storage.getItem("DSAKey");
+    return DSAKey;
   };
 
   this.setDSAKey = function (key) {
-    this.DSAKey = key;
+    DSAKey = key;
     kango.storage.setItem("DSAKey", key);
   };
 
   this.importDSAKey = function (key) {
-    this.DSAKey = JSON.parse(key);
+    this.setDSAKey(JSON.parse(key));
   };
 
-  this.exportDSAKey = function (key) {
-    return JSON.stringify(this.DSAKey);
+  this.exportDSAKey = function () {
+    return JSON.stringify(DSAKey);
   };
 
   // Compute a new DSA key.
