@@ -3,3 +3,9 @@ KangoAPI.onReady(function () {
     console.log(key);
   });
 });
+
+function exportDSAKey(argument) {
+  kango.invokeAsync("FBOTR.exportDSAKey", function (key) {
+    $("#key").text(key);
+  });
+}
