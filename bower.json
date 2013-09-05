@@ -28,5 +28,5 @@
   "dependencies": {
     "otr": "0.2.5",
     "jquery": "1.10.2"
-  },
+  }
 }
