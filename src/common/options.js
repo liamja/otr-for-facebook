@@ -6,11 +6,16 @@ KangoAPI.onReady(function () {
   kango.invokeAsync("FBOTR.getDSAKey", function (key) {
     kango.console.log(key);
   });
-});
-
-function exportDSAKey() {
-  kango.invokeAsync("FBOTR.exportDSAKey", function (key) {
-    kango.console.log(key);
-    $("#key").val(key);
+  $("#btn-key-export").click(function (event) {
+    kango.invokeAsync("FBOTR.exportDSAKey", function (key) {
+      kango.console.log(key);
+      $("#key").val(key);
+    });
   });
-}
+  $("#btn-key-gen").click(function (event) {
+    kango.invokeAsync("FBOTR.generateDSAKey", function (key) {
+      kango.console.log(key);
+      $("#key").val(key);
+    });
+  });
+});

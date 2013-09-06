@@ -22,8 +22,8 @@
         </div>
         <div class="panel-body">
           <div class="form-group">
-            <button type="button" class="btn btn-default" data-toggle="tooltip" data-locale="Generate DSA" title="Your browser may stop responding while a new key is being generated" onclick="kango.invokeAsync('FBOTR.generateDSAKey');">Generate new DSA private key</button>
-            <button type="button" class="btn btn-default" onclick="exportDSAKey();" data-locale="Export DSA">Export DSA private key</button>
+            <button type="button" id="btn-key-gen" class="btn btn-default" data-toggle="tooltip" data-locale="Generate DSA" title="Your browser may stop responding while a new key is being generated">Generate new DSA private key</button>
+            <button type="button" id="btn-key-export" class="btn btn-default" data-locale="Export DSA">Export DSA private key</button>
           </div>
           <div class="form-group">
             <textarea id="key" name="key" class="form-control" rows="8"></textarea>
