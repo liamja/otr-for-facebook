@@ -1,5 +1,5 @@
 /*global module:false*/
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
   // Project configuration.
   grunt.initConfig({
@@ -49,7 +49,7 @@ module.exports = function(grunt) {
             expand: true,
             flatten: true,
             src: [
-              'components/otr/build/dep/**',
+              'components/otr/build/dep/**'
             ],
             dest: 'src/common/lib/dep/',
             filter: 'isFile'
@@ -58,7 +58,7 @@ module.exports = function(grunt) {
             expand: true,
             flatten: true,
             src: [
-              'components/jquery/jquery.js', 
+              'components/jquery/jquery.js',
               'components/otr/build/otr.js'
             ],
             dest: 'src/common/lib/',
@@ -75,7 +75,7 @@ module.exports = function(grunt) {
     clean: {
       build: ["src/common/lib/"],
       release: ["output/"]
-    },
+    }
   });
 
   // These plugins provide necessary tasks.
@@ -88,6 +88,6 @@ module.exports = function(grunt) {
 
   // Default task.
   grunt.registerTask('default', ['jshint', 'qunit']);
-  grunt.registerTask('build', ['copy:libs', 'shell', 'clean:build']);
+  grunt.registerTask('build', ['clean:release', 'copy:libs', 'shell', 'clean:build']);
 
 };

@@ -2,8 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>OTR for Facebook</title>
-    <meta name="description" content="">
+    <title data-locale="__info_name__">OTR for Facebook</title>
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.css">
@@ -15,16 +14,16 @@
   </head>
   <body>
     <div class="container">
-      <h1>OTR for Facebook</h1>
-      <h2>Settings</h2>
+      <h1 data-locale="__info_name__">OTR for Facebook</h1>
+      <h2 data-locale="Settings">Settings</h2>
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h3 class="panel-title">Private Key</h3>
+          <h3 class="panel-title" data-locale="Private Key">Private Key</h3>
         </div>
         <div class="panel-body">
           <div class="form-group">
-            <button type="button" class="btn btn-default" data-toggle="tooltip" title="Your browser may stop responding while a new key is being generated" onclick="kango.invokeAsync('FBOTR.generateDSAKey');">Generate new DSA private key</button>
-            <button type="button" class="btn btn-default" onclick="exportDSAKey();">Export DSA private key</button>
+            <button type="button" class="btn btn-default" data-toggle="tooltip" data-locale="Generate DSA" title="Your browser may stop responding while a new key is being generated" onclick="kango.invokeAsync('FBOTR.generateDSAKey');">Generate new DSA private key</button>
+            <button type="button" class="btn btn-default" onclick="exportDSAKey();" data-locale="Export DSA">Export DSA private key</button>
           </div>
           <div class="form-group">
             <textarea id="key" name="key" class="form-control" rows="8"></textarea>

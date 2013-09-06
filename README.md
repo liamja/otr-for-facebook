@@ -51,6 +51,8 @@ or
 
     grunt build
 
+Translations can be made at [Transifex](https://www.transifex.com/organization/otr-for-facebook)
+
 
 License
 -------
