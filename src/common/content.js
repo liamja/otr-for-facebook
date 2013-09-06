@@ -14,7 +14,7 @@ console.log("OTR for Facebook loaded.");
 console.log(kango);
 
 // execute callback when the page is ready:
-$('#ChatTabsPagelet').ready(function() {
+$(document).ready(function() {
   console.log("doc ready.");
   console.log($('.headerTinymanName').text());
 
@@ -24,9 +24,16 @@ $('#ChatTabsPagelet').ready(function() {
     console.log('textarea has focus.');
   });
 
+  $(elemChatTabs).each(function(index) {
+    console.log(this);
+    $(this)
+      .find(".titlebarButtonWrapper")
+      .prepend('<a tabindex="0" data-hover="tooltip" aria-label="Encrypt" class="encrypticon button sx_ad3761 sp_docamc" role="button"></a>');
+  });
+  
 });
 
 // Get last saved color number from storage
 kango.invokeAsync('kango.storage.getItem', 'myKey', function(key) {
-    console.log('stored value for myKey is ' + myKey);
+  console.log('stored value for myKey is ' + myKey);
 });
