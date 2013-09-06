@@ -1,0 +1,9 @@
+{
+  "__info_name__": "OTR für Facebook",
+  "__info_description__": "Encrypt your Facebook chat with off-the-record messaging.",
+  "Settings": "Einstellungen",
+  "Private Key": "Private Key",
+  "Generate DSA": "Generate new DSA private key",
+  "Export DSA": "Export DSA private key",
+  "Encrypt": "Encrypt"
+}
