@@ -18,15 +18,17 @@
   "private": true,
   "ignore": [
     "**/.*",
-    "node_modules",
     "bower_components",
-    "test",
-    "tests",
+    "certificates",
+    "components",
+    "node_modules",
     "output",
-    "certificates"
+    "test",
+    "tests"
   ],
   "dependencies": {
     "otr": "0.2.5",
-    "jquery": "1.10.2"
+    "jquery": "1.10.2",
+    "bootstrap": "3.0.0"
   }
 }
